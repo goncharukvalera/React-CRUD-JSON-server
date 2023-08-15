@@ -1,0 +1,31 @@
+{
+  "user": [
+    {
+      "name": "User 1",
+      "username": "user_1",
+      "email": "user_1@gmail.com",
+      "phone": "1234567890",
+      "group": 1,
+      "ip": "[\"192.168.11.223\"]",
+      "id": 1
+    },
+    {
+      "name": "User 2",
+      "username": "user_2",
+      "email": "user_2@gmail.com",
+      "phone": "98786756564",
+      "group": 1,
+      "ip": "[\"192.168.11.222\", \"192.168.11.11\"]",
+      "id": 2
+    },
+    {
+      "name": "asdasdad",
+      "username": "asdasdad",
+      "email": "asdasdad@gmail.com",
+      "phone": "9956976967",
+      "group": 2,
+      "ip": "[\"192.168.11.444\"]",
+      "id": 3
+    }
+  ]
+}
