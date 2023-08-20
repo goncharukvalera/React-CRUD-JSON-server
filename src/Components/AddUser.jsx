@@ -7,7 +7,8 @@ const initialValue = {
     name: '',
     username: '',
     email: '',
-    phone: ''
+    phone: '',
+    ip: ''
 };
 
 const AddUser = () => {
@@ -26,7 +27,7 @@ const AddUser = () => {
 
     const addUserDetails = async () => {
         await addUser(user);
-        history.push('/all');
+        history.push('/');
     };
 
     return <Container maxWidth="sm">
@@ -51,13 +52,12 @@ const AddUser = () => {
                 </FormControl>
                 <Box my={3}>
                     <Button variant="contained" onClick={() => addUserDetails()} color="primary" align="center">Add User</Button>
-                    <Button onClick={() => history.push('/all')} variant="contained" color="secondary"
+                    <Button onClick={() => history.push('/')} variant="contained" color="secondary"
                             align="center" style={{margin: '0px 20px'}}>Cancel</Button>
                 </Box>
             </FormGroup>
         </Box>
     </Container>
 };
-
 
 export default AddUser;

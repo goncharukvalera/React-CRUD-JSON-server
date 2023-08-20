@@ -62,7 +62,7 @@ const AllUsers = () => {
                 <TableCell>{data.email}</TableCell>
                 <TableCell>{data.phone}</TableCell>
                 <TableCell>{data.group}</TableCell>
-                <TableCell>{JSON.parse(data.ip).join(', ')}</TableCell>
+                <TableCell>{data?.ip && JSON.parse(data.ip).join(', ')}</TableCell>
                 <TableCell>
                     <Button variant="contained" color="primary" style={{margin: '0px 20px'}}
                             component={Link} to={`/edit/${data.id}`}>Edit</Button>

@@ -7,7 +7,8 @@ const initialValue = {
     name: '',
     username: '',
     email: '',
-    phone: ''
+    phone: '',
+    ip: ''
 };
 
 const EditUser = () => {
@@ -16,8 +17,6 @@ const EditUser = () => {
     const {name, username, email, phone} = user;
 
     const {id} = useParams();
-
-
 
     useEffect(() => {
         getAllUsers(id).then(response => setUser(response.data));
@@ -32,7 +31,7 @@ const EditUser = () => {
 
     const editUserDetails = async () => {
         await editUser(id, user);
-        history.push('/all');
+        history.push('/');
     };
 
     return <Container maxWidth="sm">
@@ -57,13 +56,12 @@ const EditUser = () => {
                 </FormControl>
                 <Box my={3}>
                     <Button variant="contained" onClick={() => editUserDetails()} color="primary" align="center">Update User</Button>
-                    <Button onClick={() => history.push('/all')} variant="contained" color="secondary"
+                    <Button onClick={() => history.push('/')} variant="contained" color="secondary"
                             align="center" style={{margin: '0px 20px'}}>Cancel</Button>
                 </Box>
             </FormGroup>
         </Box>
     </Container>
 };
-
 
 export default EditUser;
